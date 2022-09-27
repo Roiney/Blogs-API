@@ -11,11 +11,11 @@ const getUser = async () => {
 };
 
 const getUserId = async (id) => {
-    const getUserId = await User.findByPk(id, {
+    const getUserIdPlan = await User.findByPk(id, {
         attributes: { exclude: ['password'] },
       });
-      
-    return getUserId;
+
+    return getUserIdPlan;
 };
 
 module.exports = { 
