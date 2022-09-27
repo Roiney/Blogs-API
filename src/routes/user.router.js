@@ -6,6 +6,6 @@ const tokenValidation = require('../middlewares/tokenValidation');
 const routers = express.Router();
 
 routers.post('/', userController.createUser);
-routers.get('/', userController.getUser);
+routers.get('/', tokenValidation, userController.getUser);
 
 module.exports = routers;
