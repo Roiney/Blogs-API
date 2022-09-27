@@ -14,10 +14,10 @@ const categoryModel = (sequelize, DataTypes) => {
     });
   
     Category.associate = (models) => {
-    //   User.hasMany(models.BlogPost, {
-    //     foreignKey: 'userId',
-    //     as: 'posts',
-    //   });
+      Category.hasMany(models.BlogPost, {
+        foreignKey: 'userId',
+        as: 'posts',
+      });
     };
   
     return Category;
