@@ -20,4 +20,12 @@ const token = geratoken(req.body.email, req.body.id);
 return res.status(201).json({ token });
 };
 
-module.exports = { createUser };
+const getUser = async (_req, res) => {
+   const result = await userServise.getUser();
+    return res.status(200).json(result);
+};
+
+module.exports = { 
+    createUser,
+    getUser,
+ };
