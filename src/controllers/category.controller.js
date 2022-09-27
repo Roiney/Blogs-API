@@ -11,4 +11,12 @@ console.log(newCategory);
 return res.status(201).json(newCategory);
 };
 
-module.exports = { postCategory };
+const getCategory = async (_req, res) => {
+    const result = await categoryService.getCategory();
+    return res.status(200).json(result);
+};
+
+module.exports = { 
+    postCategory, 
+    getCategory,
+ };
