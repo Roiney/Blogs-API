@@ -1,9 +1,10 @@
 const postService = require('../service/post.service');
 
-const createPostBlog = async (req, res) => {
-const result = await postService.createPostBlog(req.body);
-return res.status(201).json(result);
-};
+// const createPostBlog = async (req, res) => {
+// const { body } = req;
+// const result = await postService.createPostBlog(body);
+// return res.status(201).json(result);
+// };
 
 const getPostBlog = async (_req, res) => {
     const result = await postService.getPostBlog();
@@ -19,7 +20,6 @@ const getPostBlogId = async (req, res) => {
 };
 
 module.exports = { 
-    createPostBlog,
     getPostBlog,
     getPostBlogId,
  };
