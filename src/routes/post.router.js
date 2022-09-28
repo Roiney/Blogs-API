@@ -7,5 +7,6 @@ const routers = express.Router();
 
 routers.post('/', postController.createPostBlog);
 routers.get('/', tokenValidation, postController.getPostBlog);
+routers.get('/:id', tokenValidation, postController.getPostBlogId);
 
 module.exports = routers;
