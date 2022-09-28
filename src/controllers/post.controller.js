@@ -7,7 +7,8 @@ return res.status(201).json(result);
 
 const getPostBlog = async (_req, res) => {
     const result = await postService.getPostBlog();
-    return res.status(201).json(result);
+    console.log('controller', result);
+    return res.status(200).json(result);
     };
 
 module.exports = { 
